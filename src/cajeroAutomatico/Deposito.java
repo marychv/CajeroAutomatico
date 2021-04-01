@@ -1,4 +1,4 @@
-package cajero_automatico_proyectofinal;
+package cajeroAutomatico;
 
 import javax.swing.JOptionPane;
 

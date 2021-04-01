@@ -3,14 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cajero_automatico_proyectofinal;
+package cajeroAutomatico;
 
 /**
  *
  * @author Administrador
  */
-public class ConsultaDisponible {
+public class RetiroEfectivo {
     
-    int disponible = 500000;
-
+    int monto;
 }
