@@ -18,7 +18,8 @@ public class Menu {
                     + "2. Realizar consulta \n"
                     + "3. Pago de servicios \n"
                     + "4. Realizar retiro   \n"
-                    + "5. Salir \n"));
+                    + "5. Cambiar contrasena\n"
+                    + "6. Salir \n"));
 
             switch (escogerOpcion) {
                 case 1:
@@ -39,11 +40,19 @@ public class Menu {
                 case 4:
                     input = JOptionPane.showConfirmDialog(null, "Desea realizar otro consulta?");
                     break;
+                
                 case 5:
+                    PIN pin = new PIN();
+                    pin.cambiar_pin();
+                
+                
+                case 6:
                     opciones=false;
                     JOptionPane.showMessageDialog(null, "Gracias por utilizar el sistema bancario."); 
                     
+                    
                     break;
+                    
                 default:
                     JOptionPane.showMessageDialog(null, "El valor ingresado es incorrecto");
 
