@@ -9,6 +9,7 @@ public class CajeroAutomatico {
         Cliente cliente = new Cliente();
 
         PIN pin = new PIN();
+        JOptionPane.showMessageDialog(null, "Bienvenido a nuestro cajero automático\n\n\n ES UN PLACER ATENDERLO\n\n","Cajero Automático",1);
         pin.contrasena();
 
     }

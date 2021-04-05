@@ -6,17 +6,17 @@ public class Deposito {
 
    
     public String montoDeposito;
+    
     public Cliente cliente = new Cliente(); 
     
-    public void realizarDeposito() {
+    public int realizarDeposito(int saldo) {
 
-        montoDeposito = JOptionPane.showInputDialog(null, "Por favor introduza el monto a depositar", "Deposito", -1);
+        montoDeposito = JOptionPane.showInputDialog(null, "Por favor introduzca el monto a depositar", "Depósito", -1);
         
-        JOptionPane.showMessageDialog(null, "Su deposito fue realizado con exito por el monto de " + montoDeposito +" colones");
-          
-        cliente.setDinero(Integer.parseInt(montoDeposito));
-        JOptionPane.showMessageDialog(null, "El balance actual de su cuenta es " + cliente.getDinero() +" colones");
-        
+        JOptionPane.showMessageDialog(null, "Su depósito fue realizado con éxito por el monto de " + montoDeposito +" colones");
+        JOptionPane.showMessageDialog(null, "El balance actual de su cuenta es " + (saldo + Integer.parseInt(montoDeposito))+ " colones"); 
+        return saldo + Integer.parseInt(montoDeposito);
     }
+    
     
 }

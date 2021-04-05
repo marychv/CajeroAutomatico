@@ -17,7 +17,7 @@ public class Cliente {
     }
 
     public void setDinero(int dinero) {
-        this.dinero += dinero;
+        this.dinero = dinero;
        
     }
     
