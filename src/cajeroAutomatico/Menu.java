@@ -9,6 +9,9 @@ public class Menu {
     public Deposito deposito = new Deposito();
     public Cliente cliente = new Cliente();
     public PagoServiciosPublicos pagoServiciosPublicos = new PagoServiciosPublicos();
+    
+    public RetiroEfectivo retiroEfectivo= new RetiroEfectivo();
+    
 
     public void menu() {
 
@@ -46,6 +49,9 @@ public class Menu {
 
                             break;
                         case 4:
+                            //RetiroEfectivo ret_efec= new RetiroEfectivo();
+                            //ret_efec.retirar_efectivo(cliente.getDinero());
+                            cliente.setDinero(retiroEfectivo.retirar_efectivo(cliente.getDinero()));
                             input = JOptionPane.showConfirmDialog(null, "Desea realizar otro consulta?");
                             break;
 
