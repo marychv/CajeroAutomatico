@@ -6,6 +6,7 @@ public class PIN {
 
     String clave = "1234";
     //contrasena por defecto 1234
+    //
 
     public void contrasena() {
 
