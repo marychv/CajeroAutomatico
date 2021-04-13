@@ -1,12 +1,19 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package cajeroAutomatico;
 
 import javax.swing.JOptionPane;
 
-public class RetiroEfectivo {
-      
-   
+/**
+ *
+ * @author Moisés
+ */
+public class retiro_efectivo {
     
-    public Cliente cliente= new Cliente();
+     public Cliente cliente= new Cliente();
     
     boolean seguir;
     
@@ -21,10 +28,10 @@ public class RetiroEfectivo {
          do {
 
             int Opcion = Integer.parseInt(JOptionPane.showInputDialog("Seleccione el monto que desea retirar\n"
-                                                                + "a. 50000 colones\n"
-                                                                + "b. 10000 colones\n"
-                                                                + "c. 20000 colones\n"
-                                                                + "d. Otro monto\n"));
+                                                                + "1.     50000 colones\n"
+                                                                + "2.     10000 colones\n"
+                                                                + "3.     20000 colones\n"
+                                                                + "4.     Otro monto\n"));
 
             switch (Opcion) {
                 case 1:
@@ -118,4 +125,5 @@ public class RetiroEfectivo {
     
 }
 
+    
 }

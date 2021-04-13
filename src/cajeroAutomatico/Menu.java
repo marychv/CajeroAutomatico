@@ -10,7 +10,7 @@ public class Menu {
     public Cliente cliente = new Cliente();
     public PagoServiciosPublicos pagoServiciosPublicos = new PagoServiciosPublicos();
     
-    public RetiroEfectivo retiroEfectivo= new RetiroEfectivo();
+    public retiro_efectivo retiroEfectivo= new retiro_efectivo();
     
 
     public void menu() {
