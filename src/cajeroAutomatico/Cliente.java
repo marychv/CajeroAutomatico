@@ -4,6 +4,7 @@ package cajeroAutomatico;
 
 public class Cliente {
 
+ //Get y Set para obtener el dinero que el cliente tiene en su cuenta. 
     
     int dinero = 500000;
 

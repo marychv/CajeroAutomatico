@@ -10,22 +10,23 @@ public class Menu {
     public Cliente cliente = new Cliente();
     public PagoServiciosPublicos pagoServiciosPublicos = new PagoServiciosPublicos();
     
-    public retiro_efectivo retiroEfectivo= new retiro_efectivo();
+    public RetiroEfectivo retiroEfectivo= new RetiroEfectivo();
     
-
+//Menú del cajero automático para realizar diferentes tipos de consultas
+    
     public void menu() {
 
         while (opciones) {
 
             try {
 
-                String opcion = JOptionPane.showInputDialog("Seleccione la opcion que desea realizar\n"
-                        + "1. Realizar deposito \n"
+                String opcion = JOptionPane.showInputDialog(null, "Seleccione la opción que desea realizar\n"
+                        + "1. Realizar depósito \n"
                         + "2. Realizar consulta \n"
                         + "3. Pago de servicios \n"
                         + "4. Realizar retiro   \n"
-                        + "5. Cambiar contrasena\n"
-                        + "6. Salir \n");
+                        + "5. Cambiar contraseña\n"
+                        + "6. Salir \n", "Cajero Automático", 1);
 
                 if (opcion != null) {
 
@@ -37,22 +38,22 @@ public class Menu {
                             break;
                         case 2:
 
-                            JOptionPane.showMessageDialog(null, "El balance actual de su cuenta es " + cliente.getDinero() + " colones");
-                            input = JOptionPane.showConfirmDialog(null, "Desea realizar otro consulta?");
+                            JOptionPane.showMessageDialog(null, "El balance actual de su cuenta es " + cliente.getDinero() + " colones", "Consulta de saldo", 1);
+                            input = JOptionPane.showConfirmDialog(null, "Desea realizar otro consulta?", "Cajero Automático", 1);
 
                             break;
                         case 3:
                             
                             
                             cliente.setDinero(pagoServiciosPublicos.pagoServicios(cliente.getDinero()));
-                            input = JOptionPane.showConfirmDialog(null, "Desea realizar otro consulta?");
+                            input = JOptionPane.showConfirmDialog(null, "Desea realizar otro consulta?", "Cajero Automático", 1);
 
                             break;
                         case 4:
                             //RetiroEfectivo ret_efec= new RetiroEfectivo();
                             //ret_efec.retirar_efectivo(cliente.getDinero());
-                            cliente.setDinero(retiroEfectivo.retirar_efectivo(cliente.getDinero()));
-                            input = JOptionPane.showConfirmDialog(null, "Desea realizar otro consulta?");
+                            cliente.setDinero(retiroEfectivo.retirarefectivo(cliente.getDinero()));
+                            input = JOptionPane.showConfirmDialog(null, "Desea realizar otro consulta?", "Cajero Automático", 1);
                             break;
 
                         case 5:
@@ -61,18 +62,18 @@ public class Menu {
 
                         case 6:
                             opciones = false;
-                            JOptionPane.showMessageDialog(null, "Gracias por utilizar el sistema bancario.");
+                            JOptionPane.showMessageDialog(null, "Gracias por utilizar el sistema bancario","Cajero Automático", 1);
 
                             break;
 
                         default:
-                            JOptionPane.showMessageDialog(null, "El valor ingresado es incorrecto");
+                            JOptionPane.showMessageDialog(null, "El valor ingresado es incorrecto", "Cajero Automático", 1);
 
                     }
                     if (input == 1 || input == 2) {
 
                         opciones = false;
-                        JOptionPane.showMessageDialog(null, "Gracias por utilizar el sistema bancario.");
+                        JOptionPane.showMessageDialog(null, "Gracias por utilizar el sistema bancario", "Cajero Automático", 1);
 
                     }
 
@@ -83,7 +84,7 @@ public class Menu {
                 }
 
             } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "El valor ingresado es incorrecto");
+                JOptionPane.showMessageDialog(null, "El valor ingresado es incorrecto", "Cajero Automático", 1);
                 e.printStackTrace();
             }
 
