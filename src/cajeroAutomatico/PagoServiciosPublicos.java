@@ -39,7 +39,40 @@ public class PagoServiciosPublicos {
                     seguir = false;
                     
                     break;
+                case 2:
+                    int confirmacionaya = JOptionPane.showConfirmDialog(null, "El monto total a pagar de su factura es: " + aya + "\n\n ¿Desea continuar con el pago?");
+                    if (confirmacionaya == 0) {
+                        if ((saldo - aya) >= 0) {
+                            JOptionPane.showMessageDialog(null, "Su pago ha sido realizado con éxito");
+                            return saldo-aya;
 
+                           
+                            
+                        }
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Saldo insuficiente");
+
+                    }
+                    seguir = false;
+                    
+                    break;
+                case 3:
+                    int confirmacioncable = JOptionPane.showConfirmDialog(null, "El monto total a pagar de su factura es: " + cabletica + "\n\n ¿Desea continuar con el pago?");
+                    if (confirmacioncable == 0) {
+                        if ((saldo - cabletica) >= 0) {
+                            JOptionPane.showMessageDialog(null, "Su pago ha sido realizado con éxito");
+                            return saldo-cabletica;
+
+                           
+                            
+                        }
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Saldo insuficiente");
+
+                    }
+                    seguir = false;
+                    
+                    break;
             }
 
         } while (seguir);
