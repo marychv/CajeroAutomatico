@@ -9,13 +9,15 @@ public class Menu {
     public Deposito deposito = new Deposito();
     public Cliente cliente = new Cliente();
     public PagoServiciosPublicos pagoServiciosPublicos = new PagoServiciosPublicos();
-    
+   
     public RetiroEfectivo retiroEfectivo= new RetiroEfectivo();
     
 //Menú del cajero automático para realizar diferentes tipos de consultas
     
-    public void menu() {
+    public void menu(int dinero, int pinActual) {
 
+         
+        
         while (opciones) {
 
             try {
@@ -33,32 +35,33 @@ public class Menu {
                     int escogerOpcion = Integer.parseInt(opcion);
                     switch (escogerOpcion) {
                         case 1:
-                            cliente.setDinero(deposito.realizarDeposito(cliente.getDinero()));
+                            dinero= deposito.realizarDeposito(dinero);
                             input = JOptionPane.showConfirmDialog(null, "Desea realizar otro consulta?");
                             break;
                         case 2:
 
-                            JOptionPane.showMessageDialog(null, "El balance actual de su cuenta es " + cliente.getDinero() + " colones", "Consulta de saldo", 1);
+                            JOptionPane.showMessageDialog(null, "El balance actual de su cuenta es " + dinero + " colones", "Consulta de saldo", 1);
                             input = JOptionPane.showConfirmDialog(null, "Desea realizar otro consulta?", "Cajero Automático", 1);
 
                             break;
                         case 3:
                             
                             
-                            cliente.setDinero(pagoServiciosPublicos.pagoServicios(cliente.getDinero()));
+                            dinero= pagoServiciosPublicos.pagoServicios(dinero);
                             input = JOptionPane.showConfirmDialog(null, "Desea realizar otro consulta?", "Cajero Automático", 1);
 
                             break;
                         case 4:
                             //RetiroEfectivo ret_efec= new RetiroEfectivo();
                             //ret_efec.retirar_efectivo(cliente.getDinero());
-                            cliente.setDinero(retiroEfectivo.retirarefectivo(cliente.getDinero()));
+                            dinero = retiroEfectivo.retirarEfectivo(dinero);
                             input = JOptionPane.showConfirmDialog(null, "Desea realizar otro consulta?", "Cajero Automático", 1);
                             break;
 
                         case 5:
                             PIN pin = new PIN();
-                            pin.cambiarPin();
+                            pin.cambiarPin(Integer.toString(pinActual));
+                            break;
 
                         case 6:
                             opciones = false;
