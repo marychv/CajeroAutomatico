@@ -4,9 +4,9 @@ import javax.swing.JOptionPane;
 
 public class PagoServiciosPublicos {
 
-    int cnfl = 45000;
-    int aya = 9000;
-    int cabletica = 29900;
+    final int cnfl = 45000;
+    final int aya = 9000;
+    final int cabletica = 29900;
     int opcion;
     boolean seguir;
     public Cliente cliente = new Cliente();
@@ -25,7 +25,7 @@ public class PagoServiciosPublicos {
 
             switch (escogerOpcion) {
                 case 1:
-                    int confirmacion = JOptionPane.showConfirmDialog(null, "El monto total a pagar de su factura es: " + cnfl + "\n\n ¿Desea continuar con el pago?", "Pago CNFL",1);
+                    int confirmacion = JOptionPane.showConfirmDialog(null, "El monto total a pagar de su factura es: " + cnfl + " colones"+"\n\n ¿Desea continuar con el pago?", "Pago CNFL",1);
                     if (confirmacion == 0) {
                         if ((saldo - cnfl) >= 0) {
                             JOptionPane.showMessageDialog(null, "Su pago ha sido realizado con éxito", "Pago CNFL", 1);
@@ -42,7 +42,7 @@ public class PagoServiciosPublicos {
                     
                     break;
                 case 2:
-                    int confirmacionaya = JOptionPane.showConfirmDialog(null, "El monto total a pagar de su factura es: " + aya + "\n\n ¿Desea continuar con el pago?", "Pago AyA", 1);
+                    int confirmacionaya = JOptionPane.showConfirmDialog(null, "El monto total a pagar de su factura es: " + aya + " colones"+"\n\n ¿Desea continuar con el pago?", "Pago AyA", 1);
                     if (confirmacionaya == 0) {
                         if ((saldo - aya) >= 0) {
                             JOptionPane.showMessageDialog(null, "Su pago ha sido realizado con éxito", "Pago AyA", 1);
@@ -59,7 +59,7 @@ public class PagoServiciosPublicos {
                     
                     break;
                 case 3:
-                    int confirmacioncable = JOptionPane.showConfirmDialog(null, "El monto total a pagar de su factura es: " + cabletica + "\n\n ¿Desea continuar con el pago?","Pago Cabletica", 1);
+                    int confirmacioncable = JOptionPane.showConfirmDialog(null, "El monto total a pagar de su factura es: " + cabletica + " colones"+"\n\n ¿Desea continuar con el pago?","Pago Cabletica", 1);
                     if (confirmacioncable == 0) {
                         if ((saldo - cabletica) >= 0) {
                             JOptionPane.showMessageDialog(null, "Su pago ha sido realizado con éxito", "Pago Cabletica", 1);
