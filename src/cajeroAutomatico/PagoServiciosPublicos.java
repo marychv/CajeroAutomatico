@@ -7,7 +7,7 @@ public class PagoServiciosPublicos {
     final int cnfl = 45000;
     final int aya = 9000;
     final int cabletica = 29900;
-    int opcion;
+//    int opcion;
     boolean seguir;
     public Cliente cliente = new Cliente();
 

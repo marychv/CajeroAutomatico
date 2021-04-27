@@ -67,7 +67,7 @@ public class RetiroEfectivo {
                     break;
 
                 case 4:
-                    int montoRetirar = Integer.parseInt(JOptionPane.showInputDialog(null, "Cual es el monto que desea retirar?", "Retiro de Efectivo",1));
+                    int montoRetirar = Integer.parseInt(JOptionPane.showInputDialog(null, "¿Cual es el monto que desea retirar?", "Retiro de Efectivo",1));
 
                     int confirmacion3 = JOptionPane.showConfirmDialog(null, "¿Desea retirar " + montoRetirar + " colones?", "Retiro de Efectivo",1);
                     if (confirmacion3 == 0) {
