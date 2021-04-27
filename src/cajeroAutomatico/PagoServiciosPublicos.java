@@ -11,6 +11,8 @@ public class PagoServiciosPublicos {
     boolean seguir;
     public Cliente cliente = new Cliente();
 
+    //Pago de servicios, en esta se pueden realizar el pago de 3 opciones diferentes las cuales despues de ejecutarse se resta del fondo actual. 
+    
 
     public int pagoServicios(int saldo) {
 

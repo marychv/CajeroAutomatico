@@ -12,7 +12,7 @@ public class Menu {
    
     public RetiroEfectivo retiroEfectivo= new RetiroEfectivo();
     
-//Menú del cajero automático para realizar diferentes tipos de consultas
+////Menú del cajero automático para realizar diferentes tipos de consultas
     
     public void menu(int dinero, int pinActual) {
 
@@ -36,26 +36,26 @@ public class Menu {
                     switch (escogerOpcion) {
                         case 1:
                             dinero= deposito.realizarDeposito(dinero);
-                            input = JOptionPane.showConfirmDialog(null, "Desea realizar otro consulta?");
+                            input = JOptionPane.showConfirmDialog(null, "¿Desea realizar otro consulta?");
                             break;
                         case 2:
 
-                            JOptionPane.showMessageDialog(null, "El balance actual de su cuenta es " + dinero + " colones", "Consulta de saldo", 1);
-                            input = JOptionPane.showConfirmDialog(null, "Desea realizar otro consulta?", "Cajero Automático", 1);
+                            JOptionPane.showMessageDialog(null, "El balance actual de su cuenta es de " + dinero + " colones", "Consulta de saldo", 1);
+                            input = JOptionPane.showConfirmDialog(null, "¿Desea realizar otro consulta?", "Cajero Automático", 1);
 
                             break;
                         case 3:
                             
                             
                             dinero= pagoServiciosPublicos.pagoServicios(dinero);
-                            input = JOptionPane.showConfirmDialog(null, "Desea realizar otro consulta?", "Cajero Automático", 1);
+                            input = JOptionPane.showConfirmDialog(null, "¿Desea realizar otro consulta?", "Cajero Automático", 1);
 
                             break;
                         case 4:
                             //RetiroEfectivo ret_efec= new RetiroEfectivo();
                             //ret_efec.retirar_efectivo(cliente.getDinero());
                             dinero = retiroEfectivo.retirarEfectivo(dinero);
-                            input = JOptionPane.showConfirmDialog(null, "Desea realizar otro consulta?", "Cajero Automático", 1);
+                            input = JOptionPane.showConfirmDialog(null, "¿Desea realizar otro consulta?", "Cajero Automático", 1);
                             break;
 
                         case 5:

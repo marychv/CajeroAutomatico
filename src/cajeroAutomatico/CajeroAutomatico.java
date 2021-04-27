@@ -5,6 +5,8 @@ import javax.swing.JOptionPane;
 public class CajeroAutomatico {
 
     public static void main(String[] args) {
+        
+// Arreglo que contiene 8 clientes cada uno con un PIN y fondo diferente para poder un PIN diferente.
 
         Cliente cliente[] = new Cliente[8];
 

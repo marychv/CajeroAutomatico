@@ -5,7 +5,7 @@ package cajeroAutomatico;
 public class Cliente {
 
     
- //Get y Set para obtener el dinero que el cliente tiene en su cuenta. 
+ //Get y Set para obtener el dinero y el PIN que el cliente tiene en su cuenta. 
     
     
     int dinero, pin, cedula; 
